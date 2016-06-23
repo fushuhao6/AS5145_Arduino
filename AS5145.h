@@ -6,14 +6,14 @@
 class AS5145
 {
   public:
-    AS5145(uint16_t DataPin, uint16_t ClockPin, uint16_t ChipSelectPin, uint16_t ProgramInputPin);
-    AS5145(uint16_t PWMPin);
-    uint32_t encoder_degrees(void);
-    uint32_t encoder_value(void);
-    uint32_t encoder_error(void);
-    uint32_t pwm_degrees(void);
-    uint32_t high_value(void);
-    uint32_t low_value(void);
+    AS5145(uint16_t DataPin, uint16_t ClockPin, uint16_t ChipSelectPin, uint16_t ProgramInputPin);	// for digital mode
+    AS5145(uint16_t PWMPin);		// for pwm mode
+    uint32_t encoder_degrees(void);	// get the absolute degree
+    uint32_t encoder_value(void);	// get the raw data, 0-4095
+    uint32_t encoder_error(void);	// have not implemented this function yet
+    uint32_t pwm_degrees(void);		// get the absolute degree
+    uint32_t high_value(void);		// get high time of a pulse
+    uint32_t low_value(void);		// get low time of a pulse
     struct err_struct{
   	bool DECn;
 	bool INCn;
@@ -31,5 +31,4 @@ class AS5145
 };
 
 #endif
-
 
