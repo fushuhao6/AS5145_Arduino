@@ -72,6 +72,7 @@ uint32_t AS5145::read_chip(void)
   digitalWrite(_cs, LOW);
   delayMicroseconds(50);
   digitalWrite(_clock, LOW);
+  // read 18 bits
   for (c = 0; c < 18; c++)
   {
     digitalWrite(_clock, HIGH);
@@ -84,5 +85,4 @@ uint32_t AS5145::read_chip(void)
  return raw_value;
 }
   
-
 
