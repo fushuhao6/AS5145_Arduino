@@ -29,6 +29,8 @@ Simply call pwm_degrees() function to get the absolute degree.
 For debugging, you can use high_value() and low_value().
 
 
+A little suggestion: if your kart runs at 15 miles per hour with the diameter 6 inches of your wheel, the period to get angle value must be lower than 70 ms.
+
 
 I have also attached a test file.
 
